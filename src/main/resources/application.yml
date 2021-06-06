@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: service-B
+server:
+  port: 8081
+  
+  
+external:
+  interface-c:
+    base-url: http://localhost:8082/serviceC 
+    request-url: ${external.interface-c.base-url}/processRequest
+  interface-d:
+    base-url: http://localhost:8083/serviceD
+    request-url: ${external.interface-d.base-url}/processRequest  
